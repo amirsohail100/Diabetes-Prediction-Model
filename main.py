@@ -73,9 +73,9 @@ def greet():
 
 @app.post("/predict", response_model=PredictionResponse)
 def predict(data: Data):
-    # Input data ko DataFrame mein convert karna
+    # Input data ko DataFrame mein convert karna (Changed "pregnancies" to "Pregnancies")
     input_row = pd.DataFrame([{
-        "pregnancies": data.pregnancies,
+        "Pregnancies": data.pregnancies,
         "Glucose": data.glucose,
         "BloodPressure": data.bloodpressure,
         "SkinThickness": data.skinthickness,
